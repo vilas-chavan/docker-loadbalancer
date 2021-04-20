@@ -8,6 +8,10 @@ services:
     build: ./app2
     ports: 
       - "5002:5000"
+  app3:
+    build: ./app3
+    ports:
+      - "5003:5000" 
   nginx:
     build: ./nginx
     ports: 
@@ -15,3 +19,4 @@ services:
     depends_on:
       - app1
       - app2
+      - app3 
